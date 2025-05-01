@@ -32,7 +32,7 @@ func getLinesChannel(f io.ReadCloser) <-chan string {
 			currentLine += string(data[:count])
 			parts := strings.Split(currentLine, "\n")
 
-			for i := 0; i < len(parts)-1; i++ {
+			for i := range len(parts) - 1 {
 				lines <- parts[i]
 			}
 
