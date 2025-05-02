@@ -1,4 +1,5 @@
 import chalk from "chalk";
+
 // Bun.listen({
 //   hostname: "localhost",
 //   port: 42069,
@@ -11,7 +12,7 @@ import chalk from "chalk";
 
 Bun.connect({
   hostname: "localhost",
-  port: 42069,
+  port: 43000,
   socket: {
     open(s) {
       const rawHttp = [
@@ -32,7 +33,7 @@ Bun.connect({
 });
 
 Bun.serve({
-  port: 42069,
+  port: 43000,
   fetch(req) {
     console.log("---------------- 🌐 FROM WEB SERVER 🌐 ----------------");
     console.log(chalk.black.bgGreen.bold(`Method: ${req.method} ${req.url}\n`));
