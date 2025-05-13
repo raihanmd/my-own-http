@@ -1,1 +1,3 @@
 GET http://localhost:42069
+
+GET http://localhost:42069/coffee
